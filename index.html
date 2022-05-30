@@ -1,1 +1,92 @@
-<p>wqh</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML+CSS 爱心跳动</title>
+  </head>
+<style type="text/css">
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.love{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    /* 旋转45度 */
+    transform: rotate(45deg);
+    background-color: orangered;
+    animation: love 1s infinite;
+}
+
+/* 把afetr和before两个伪元素的一样的属性写到一块 */
+.love::after,.love::before{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: orangered;
+    animation: love 1s infinite;
+}
+
+.love::after{
+    top: 0;
+    left: -100px;
+}
+
+.love::before{
+    top: -100px;
+    left: 0;
+}
+
+.centent{
+    animation: love-text 1s infinite;
+    position: fixed;
+    bottom:40px;
+}
+
+@keyframes love-text{
+    0%{
+        font-size: 14px;
+    }
+    20%{
+        font-size: 18px;
+        /* background-color: #ff3303; */
+    }
+    100%{
+        font-size: 14px;
+    }
+}
+
+/* 下面定义爱心跳动的动画 */
+@keyframes love{
+    0%{
+        width: 200px;
+        height: 200px;
+    }
+    20%{
+        width: 230px;
+        height: 230px;
+        background-color: #ff3303;
+    }
+    100%{
+        width: 200px;
+        height: 200px;
+    }
+}
+</style>
+  <body>
+    <div class="love"></div>
+    <h1 class="centent">给最爱的大宝贝，郑贵妃</h1>
+  </body>
+</html>
