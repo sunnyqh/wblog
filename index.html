@@ -1,7 +1,7 @@
 <!--
  * @Author: wqh
  * @LastEditors: wqh
- * @LastEditTime: 2022-05-31 20:52:58
+ * @LastEditTime: 2022-05-31 21:50:13
  * @Descripttion: wendding
 -->
 <!DOCTYPE html>
@@ -27,32 +27,49 @@ body{
   color: red;
   margin-bottom: 20px;
 }
+.img{
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+.img:hover {
+    border: 1px solid #777;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
 .cap{
-  width: 480px;
+  width: 200px;
 }
 .library{
-  width: 480px;
+  width: 200px;
 }
 </style>
   <body>
     <div>
-      <h1 class="centent">欢迎来郑贵发和吴绮卉的婚礼现场</h1>
+      <h2 class="centent">郑贵发和吴绮卉</h2>
       <div>
-        <div>
-          <div>
-            <img class="cap" src="asset/img/cap.jpg">
-          </div>
-          <div>
-            <h3 class="">第一份礼物</h3>
-          </div>
+        <div class="img">
+          <a target="_blank" href="asset/img/cap.jpg">
+            <img src="asset/img/cap.jpg" alt="第一份礼物" width="300" height="200">
+          </a>
+          <div class="desc">第一份礼物</div>
         </div>
-        <div>
-          <div>
-            <img class="library" src="asset/img/library.jpg">
-          </div>
-          <div>
-            <h3 class="">第一份礼物</h3>
-          </div>
+        <div class="img">
+          <a target="_blank" href="asset/img/library.jpg">
+            <img src="asset/img/library.jpg" alt="学校图书馆" width="300" height="200">
+          </a>
+          <div class="desc">学校图书馆</div>
         </div>
       </div>
     </div>
