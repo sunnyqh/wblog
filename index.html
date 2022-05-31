@@ -1,7 +1,7 @@
 <!--
  * @Author: wqh
  * @LastEditors: wqh
- * @LastEditTime: 2022-05-31 21:52:15
+ * @LastEditTime: 2022-05-31 22:48:57
  * @Descripttion: wendding
 -->
 <!DOCTYPE html>
@@ -23,22 +23,49 @@ body{
     align-items: center;
     height: 100vh;
 }
+.title{
+  display: flex;
+}
 .centent{
   color: red;
   margin-bottom: 20px;
 }
-.img{
+#heart:before,
+
+#heart:after{
+  position:absolute;
+  left:25px;
+  top:0;
+  content: '';
+  width: 25px;
+  height: 40px;
+  background: red;
+  border-radius: 40px 40px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+#heart:after {
+  content: '';
+  left: 0;
+  top:0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+}
+
+.img img{
     margin: 5px;
     border: 1px solid #ccc;
     float: left;
-    width: 180px;
+    width: 200px;
 }
 
-.img:hover {
-    border: 1px solid #777;
-}
-
-.img img {
+.img {
     width: 100%;
     height: auto;
 }
@@ -48,21 +75,19 @@ body{
     text-align: center;
 }
 
-.cap{
-  width: 200px;
-}
-.library{
-  width: 200px;
-}
 </style>
   <body>
     <div>
-      <h2 class="centent">郑贵发和吴绮卉</h2>
-      <div>
+      <div class="title">
+        <h2 class="centent">郑贵发</h2>
+          <div id="heart">
+        <h2 class="centent">吴绮卉</h2>
+      </div>
+      <div class="text">
         <div>
           <div class="img">
             <a target="_blank" href="asset/img/cap.jpg">
-              <img src="asset/img/cap.jpg" alt="第一份礼物" width="300" height="200">
+              <img src="asset/img/cap.jpg" alt="第一份礼物" width="200" height="200">
             </a>
             <div class="desc">第一份礼物</div>
           </div>
